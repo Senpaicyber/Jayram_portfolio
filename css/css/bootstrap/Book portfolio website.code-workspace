@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Book_portfolio_website_tcw/Book portfolio website"
+		},
+		{
+			"path": "../../../../unfold-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "unfold-master"
+	}
+}
