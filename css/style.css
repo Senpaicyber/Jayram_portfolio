@@ -2273,4 +2273,87 @@ span.error {
   transform: scale(1.2); /* zoom in */
 }
 
+/* ===== Career Flip Card Component ===== */
+
+.career-card {
+  background: transparent;
+  width: 100%;
+  max-width: 350px;
+  height: 420px;
+  perspective: 1000px;
+  margin: 1rem auto;
+}
+
+.career-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover (desktop) or tap (mobile) */
+.career-card:hover .career-card-inner,
+.career-card:active .career-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & back faces */
+.career-card-front,
+.career-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Front side */
+.career-card-front {
+  background-color: #111;
+  color: white;
+}
+
+.career-card-front img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.career-front-text {
+  padding: 15px;
+}
+
+/* Back side */
+.career-card-back {
+  background-color: #191919;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.career-card-back h3 {
+  color: #2a7ae2;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-card {
+    height: 380px;
+    max-width: 100%;
+  }
+  .career-card-inner {
+    transition: transform 0.6s ease;
+  }
+}
 
